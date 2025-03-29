@@ -37,8 +37,8 @@ TEST(task2, test2) {
     Automata* automata = new Automata();
     automata->on();
     automata->coin(30);
-    STATES result = automata->getState();
-    ASSERT_EQ(true, automata->choice("cacao"));
+    bool result = automata->choice("cacao");
+    ASSERT_EQ(true, result);
 }
 TEST(task2, test3) {
     Automata* automata = new Automata();
