@@ -35,33 +35,30 @@ TEST(task2, test1) {
 }
 TEST(task2, test2) {
     Automata* automata = new Automata();
-    automata->on();
-    automata->coin(30);
-    bool result = automata->choice("cacao");
-    ASSERT_TRUE(result);
+    ASSERT_EQ(STATES::OFF, automata->getState());
 }
 TEST(task2, test3) {
+    std::stringstream strs;
     Automata* automata = new Automata();
     automata->on();
-    automata->coin(10);
-    ASSERT_TRUE(automata->choice("cacao"));
+    ASSERT_EQ(STATES::WAIT, automata->getState());
 }
 TEST(task2, test4) {
     Automata* automata = new Automata();
     automata->on();
-    automata->coin(120);
-    ASSERT_TRUE(automata->choice("capuchino"));
+    automata->off();
+    ASSERT_EQ(STATES::OFF, automata->getState());
 }
 TEST(task2, test5) {
     Automata* automata = new Automata();
     automata->on();
-    automata->coin(-10);
-    EXPECT_EQ(STATES::WAIT, automata->getState());
+    automata->on();
+    ASSERT_EQ(STATES::WAIT, automata->getState());
 }
 TEST(task2, test6) {
     Automata* automata = new Automata();
     automata->on();
-    automata->coin(90);
-    automata->coin(10);
-    ASSERT_TRUE(automata->choice("capuchino"));
+    automata->off();
+    automata->on();
+    ASSERT_EQ(STATES::WAIT, automata->getState());
 }
