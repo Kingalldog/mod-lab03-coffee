@@ -10,7 +10,8 @@
 
 enum class STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 
-class Automata{
+class Automata {
+
     private:
         int32_t cash;
         std::vector<std::string> menu;
@@ -20,6 +21,7 @@ class Automata{
         bool check(std::string coffe_name);
         bool cook(std::string coffe_name);
         bool finish();
+
     public:
         Automata();
         Automata(std::vector<std::string> Menu, std::vector<int32_t> Prices);
@@ -31,4 +33,4 @@ class Automata{
         bool choice(std::string coffe_name);
         bool cancel();
 };
-#endif
+#endif  // INCLUDE_AUTOMATA_H_
