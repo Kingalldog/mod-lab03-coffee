@@ -89,7 +89,7 @@ bool Automata::cook(std::string coffe_name) {
         }
     }
     cash -= prices[ind];
-    for(int i = 0; i < 1e8; ++i) {
+    for (int i = 0; i < 1e8; ++i) {
     }
     return finish();
 }
