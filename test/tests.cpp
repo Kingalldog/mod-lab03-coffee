@@ -38,19 +38,19 @@ TEST(task2, test2) {
     automata->on();
     automata->coin(30);
     bool result = automata->choice("cacao");
-    ASSERT_EQ(true, result);
+    ASSERT_TRUE(result);
 }
 TEST(task2, test3) {
     Automata* automata = new Automata();
     automata->on();
     automata->coin(10);
-    ASSERT_EQ(false, automata->choice("cacao"));
+    ASSERT_TRUE(automata->choice("cacao"));
 }
 TEST(task2, test4) {
     Automata* automata = new Automata();
     automata->on();
     automata->coin(120);
-    EXPECT_EQ(true, automata->choice("capuchino"));
+    ASSERT_TRUE(automata->choice("capuchino"));
 }
 TEST(task2, test5) {
     Automata* automata = new Automata();
@@ -63,5 +63,5 @@ TEST(task2, test6) {
     automata->on();
     automata->coin(90);
     automata->coin(10);
-    ASSERT_EQ(true, automata->choice("capuchino"));
+    ASSERT_TRUE(automata->choice("capuchino"));
 }
