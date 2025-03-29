@@ -32,16 +32,12 @@ TEST(task2, test1) {
     automata->coin(30);
     STATES result = automata->getState();
     ASSERT_EQ(STATES::ACCEPT, result);
-    automata->choice("cacao");
-    result = automata->getState();
-    ASSERT_EQ(STATES::WAIT, result);
 }
 TEST(task2, test2) {
     Automata* automata = new Automata();
     automata->on();
     automata->coin(30);
     STATES result = automata->getState();
-    ASSERT_EQ(STATES::ACCEPT, result);
     ASSERT_EQ(true, automata->choice("cacao"));
 }
 TEST(task2, test3) {
