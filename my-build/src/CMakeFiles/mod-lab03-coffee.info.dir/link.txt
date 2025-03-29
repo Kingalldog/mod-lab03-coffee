@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/mod-lab03-coffee.info.dir/main.cpp.o  -o mod-lab03-coffee.info  -Wl,-rpath,/home/vsamohin/mod-lab03-coffee/my-build/src: libmod-lab03-coffee.so -lpthread 

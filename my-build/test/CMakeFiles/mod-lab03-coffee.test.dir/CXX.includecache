@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Automata.h
+unistd.h
+-
+string
+-
+vector
+-
+fstream
+-
+iostream
+-
+
+/home/vsamohin/mod-lab03-coffee/test/AllTests.cpp
+gtest/gtest.h
+-
+
+/home/vsamohin/mod-lab03-coffee/test/tests.cpp
+gtest/gtest.h
+-
+Automata.h
+/home/vsamohin/mod-lab03-coffee/test/Automata.h
+
