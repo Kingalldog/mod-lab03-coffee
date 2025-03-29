@@ -1,8 +1,11 @@
 // Copyright 2022 UNN-IASR
 #include"Automata.h"
+#include<string>
+#include<vector>
+#include<iostream>
 
-Automata::Automata(std::vector<std::string> Menu, std::vector<int32_t> Prices) : 
-    menu(Menu), prices(prices) { state = STATES::OFF;}
+Automata::Automata(std::vector<std::string> Menu, std::vector<int32_t> Prices)
+    : menu(Menu), prices(prices) { state = STATES::OFF;}
 Automata::Automata() {
     state = STATES::OFF;
     std::ifstream fin;

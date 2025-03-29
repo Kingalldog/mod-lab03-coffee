@@ -1,5 +1,6 @@
 // Copyright 2022 UNN-IASR
 #include "Automata.h"
+#include<iostream>
 
 int main() {
     Automata* automata = new Automata();
